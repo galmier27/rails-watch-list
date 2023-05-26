@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 
-#main-image{
+.main-image{
 background-image: url(https://focus.nouvelobs.com/2022/10/28/970/0/6174/3087/1200/630/60/0/437f21d_1666952691817-080-hl-vbelloni-1245225.jpg);
 height: 500px;
 width: 100%;
@@ -27,4 +27,18 @@ justify-content: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+
+  .main-image {
+    height: 250px;
+  }
+  .main-image h1 {
+    font-size: 55px;
+  }
+
+  .main-image p {
+    font-size: 15px;
+  }
 }
