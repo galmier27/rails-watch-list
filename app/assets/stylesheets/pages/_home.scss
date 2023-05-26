@@ -1,1 +1,30 @@
 // Specific CSS for your home-page
+
+#main-image{
+background-image: url(https://focus.nouvelobs.com/2022/10/28/970/0/6174/3087/1200/630/60/0/437f21d_1666952691817-080-hl-vbelloni-1245225.jpg);
+height: 500px;
+width: 100%;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.index-title {
+  color: white;
+  text-align: center;
+}
+
+.index-title p {
+
+  font-size: 30px;
+}
+
+.add-button {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

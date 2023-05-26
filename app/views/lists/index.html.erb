@@ -1,0 +1,42 @@
+
+  <div id="main-image">
+    <div class="index-title">
+      <h1>Mes films</h1>
+      <p>Voici ta liste de films</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="add-button">
+      <p><%= @lists.count %> listes</p>
+    </div>
+    <div class="cards mb-3">
+      <% @lists.each do |list| %>
+       <%= link_to list_path(list) do%>
+          <% if list.bookmarks.first != nil %>
+            <% url = ("url" + "(" + list.bookmarks.first.movie.poster_url + ")")%>
+          <%else %>
+            <% url = ("url(https://hips.hearstapps.com/hmg-prod/images/hbz-042517-oldhollywood-1493167401.jpg)") %>
+          <%end%>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%=url%>">
+            <h3><%= list.name %></h3>
+          </div>
+        <% end %>
+      <% end %>
+      <div class="flip-card" data-controller="click" >
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h3>Rajouter une Liste</h3>
+          </div>
+          <div class="flip-card-back">
+              <div class="card-form">
+                <%= simple_form_for(@list) do |f| %>
+                    <%= f.input :name, label: false, placeholder: "Nom de ta liste" %>
+                    <%= f.submit %>
+                  <% end %>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import ClickController from "./click_controller"
+application.register("click", ClickController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)

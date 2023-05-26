@@ -1,0 +1,25 @@
+#show-image {
+  background-image: url(https://media.istockphoto.com/id/1292150773/fr/vectoriel/bandes-de-film-3d-réalistes-en-perspective-fond-moderne-de-cinéma-affiche-modèle-pour-le.jpg?s=170667a&w=0&k=20&c=nYhkwvGN4JpEVQJEObtWPRmiCRgKxO2e-UhWoF9gLXg=);
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.show-button{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-movie {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
