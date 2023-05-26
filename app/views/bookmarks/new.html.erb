@@ -1,11 +1,18 @@
-<div class="container">
-<h1>Nouveau Film</h1>
-<p>Choisis et commente un film pour ta liste</p>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.button :submit %>
-<% end %>
-<br>
-<%= link_to "Go Back", list_path(@list), class:"btn btn-light"  %>
+<div id="main-image">
+    <div class="index-title">
+      <h1>Nouveau Film</h1>
+      <p>Choisis et commente un film pour ta liste</p>
+    </div>
+  </div>
+
+
+
+<div class="container mt-3">
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment, label: "Ton commentaire" %>
+    <%= f.association :movie, label: "Choisis ton film" %>
+    <%= f.button :submit, value: "Ajouter",class: "btn btn-primary" %>
+  <% end %>
+  <br>
+  <%= link_to "Retour", list_path(@list), class:"btn btn-light"  %>
 </div>

@@ -23,3 +23,15 @@
   object-fit: cover;
   object-position: center;
 }
+
+
+@media (min-width: 100px) and (max-width: 575px) {
+
+  #show-image {
+    height: 150px;
+  }
+
+  #show-image h1{
+    font-size: 80px;
+  }
+}
